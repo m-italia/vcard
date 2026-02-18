@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edoardo Moras | M-Italia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Titillium Web', sans-serif;
+  background:#000000;
+  color:#ffffff;
+  text-align:center;
+}
+
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:25px 15px;
+}
+
+.logo{
+  width:192px;
+  margin:0 auto 20px auto;
+  display:block;
+}
+
+.profile{
+  width:115px;
+  height:115px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid #ffffff;
+  margin:15px auto 10px auto;
+  display:block;
+}
+
+h1{
+  font-size:26px;
+  font-weight:700;
+  margin:0;
+  color:#d20a10; /* Nome in rosso */
+}
+
+.role{
+  color:#cccccc;
+  margin-top:3px;
+  font-size:18px; /* leggermente più grande */
+  font-weight:400;
+}
+
+.section{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:center;
+}
+
+.contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:16px;
+  font-weight:600;
+  line-height:1.2;
+}
+
+.contact-item img{
+  width:20px;
+  height:20px;
+}
+
+.office-title{
+  margin-top:25px;
+  font-weight:700;
+  font-size:17px;
+}
+
+.address{
+  margin-top:4px;
+  line-height:1.2;
+  font-size:15px;
+}
+
+.maps-link{
+  margin-top:4px;
+  display:inline-block;
+  font-weight:700;
+  color:#ffffff;
+  text-decoration:underline;
+  font-size:15px;
+}
+
+.website{
+  margin-top:20px;
+  font-weight:700;
+  font-size:17px;
+}
+
+.button{
+  display:block;
+  width:100%;
+  padding:14px;
+  margin-top:12px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:16px;
+  transition:0.2s ease;
+}
+
+.button:hover{
+  transform:translateY(-1px);
+}
+
+.whatsapp{
+  background:#25D366;
+  color:#ffffff;
+  text-transform:uppercase; /* Tutto in caps */
+}
+
+.primary{
+  background:#d20a10;
+  color:#ffffff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LOGO -->
+  <img src="https://raw.githubusercontent.com/m-italia/firma-email-assets/refs/heads/main/icons/m-italia-wide-wht.svg" class="logo" alt="M-Italia">
+
+  <!-- FOTO PLACEHOLDER -->
+  <img src="https://randomuser.me/api/portraits/men/32.jpg" class="profile" alt="Edoardo Moras">
+
+  <!-- NOME + RUOLO -->
+  <h1>Edoardo Moras</h1>
+  <div class="role">Amministratore</div>
+
+  <!-- CONTATTI -->
+  <div class="section">
+    <div class="contact-item">
+      <img src="https://raw.githubusercontent.com/m-italia/vcard/refs/heads/main/icons/phone-wht.svg" alt="Telefono fisso">
+      +39 0422 178 9313
+    </div>
+    <div class="contact-item">
+      <img src="https://raw.githubusercontent.com/m-italia/vcard/refs/heads/main/icons/mobile-wht.svg" alt="Cellulare">
+      +39 335 666 6739
+    </div>
+    <div class="contact-item">
+      <img src="https://raw.githubusercontent.com/m-italia/vcard/refs/heads/main/icons/mail-wht.svg" alt="Email">
+      edoardo.moras@m-italia.com
+    </div>
+  </div>
+
+  <!-- UFFICI -->
+  <div class="office-title">
+    Uffici e Showroom
+  </div>
+
+  <div class="address">
+    Via Tommaso Abbate, 43<br>
+    30020 Quarto d'Altino (VE)
+  </div>
+
+  <a class="maps-link" 
+     href="https://www.google.com/maps/search/?api=1&query=M+Italia+Via+Tommaso+Abbate+43+30020+Quarto+d'Altino+VE"
+     target="_blank">
+     NAVIGA QUI
+  </a>
+
+  <!-- SITO -->
+  <div class="website">
+    www.m-italia.com
+  </div>
+
+  <!-- BOTTONI -->
+  <a href="https://wa.me/393356666739" class="button whatsapp">
+    SCRIVIMI SU WHATSAPP
+  </a>
+
+  <a href="edoardo-moras.vcf" class="button primary">
+    SALVA CONTATTO
+  </a>
+
+</div>
+
+</body>
+</html>
