@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Moras;Edoardo;;;
+FN:Edoardo Moras
+ORG:M-Italia SRL
+TITLE:Amministratore
+TEL;TYPE=WORK,VOICE:+39 0422 178 9313
+TEL;TYPE=CELL,VOICE:+39 335 666 6739
+EMAIL;TYPE=PREF,INTERNET:edoardo.moras@m-italia.com
+ADR;TYPE=WORK:;;Via Tommaso Abbate, 43;Quarto d'Altino;VE;30020;Italia
+URL;TYPE=WORK:www.m-italia.com
+END:VCARD
