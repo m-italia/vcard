@@ -87,14 +87,14 @@
 
     /* ─── LOGO ───────────────────────────────────────────────── */
     .logo-wrap {
-      margin-bottom: 14px;
+      margin-bottom: 22px;
       margin-top: 24px;
       opacity: 0;
       transform: translateY(-18px);
       animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
     }
     .logo-wrap img {
-      width: 90px;
+      width: 72px;
       display: block;
       filter: drop-shadow(0 8px 28px rgba(210,10,16,0.30));
     }
@@ -108,8 +108,8 @@
       animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.22s forwards;
     }
     .avatar {
-      width: 88px;
-      height: 88px;
+      width: 106px;
+      height: 106px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
@@ -476,14 +476,14 @@
 
       </div>
 
-      <!-- Email -->
-      <a href="/cdn-cgi/l/email-protection#99f7f6f4fcb7faf6fef7f6f4fcd9f4b4f0edf8f5f0f8b7faf6f4" class="contact-row">
+      <!-- Email — costruita via JS per evitare offuscamento Cloudflare -->
+      <a href="#" id="emailLink" class="contact-row" onclick="openMail(event)">
         <div class="contact-icon">
           <img src="https://raw.githubusercontent.com/m-italia/vcard/refs/heads/main/icons/mail-wht.svg" alt="email">
         </div>
         <div class="contact-info">
           <span class="contact-label">Email</span>
-          <span class="contact-value"><span class="__cf_email__" data-cfemail="3b5554565e1558545c5554565e7b5616524f5a57525a15585456">[email&#160;protected]</span></span>
+          <span class="contact-value" id="emailDisplay"></span>
         </div>
       </a>
 
@@ -600,6 +600,24 @@
       Personalizza i campi qui sotto con i dati reali della persona.
       Il formato vCard 3.0 è supportato da iOS, Android e tutti i client di contatti.
     */
+    /* ─── EMAIL ANTI-CLOUDFLARE ─────────────────────────────── */
+    (function() {
+      var u = 'edoardo.moras';
+      var d = 'm-italia.com';
+      var email = u + '@' + d;
+      var el = document.getElementById('emailDisplay');
+      var link = document.getElementById('emailLink');
+      if (el) el.textContent = email;
+      if (link) link.setAttribute('data-email', email);
+    })();
+
+    function openMail(e) {
+      e.preventDefault();
+      var link = document.getElementById('emailLink');
+      var email = link.getAttribute('data-email');
+      window.location.href = 'mailto:' + email;
+    }
+
     function downloadVCard(e) {
       e.preventDefault();
 
@@ -612,7 +630,7 @@
         'TITLE:Amministratore',
         'TEL;TYPE=CELL,PREF:+393356666739',
         'TEL;TYPE=WORK:+390422178313',
-        'EMAIL;TYPE=WORK:edoardo.moras@m-italia.com',
+        'EMAIL;TYPE=WORK:' + 'edoardo.moras' + '@' + 'm-italia.com',
         'URL:https://www.m-italia.com',
         'ADR;TYPE=WORK:;;Via Tommaso Abbate 43;Quarto d\'Altino;VE;30020;Italia',
         'END:VCARD'
