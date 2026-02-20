@@ -85,27 +85,14 @@
       padding: 0;
     }
 
-    /* ─── LOGO ───────────────────────────────────────────────── */
-    .logo-wrap {
-      margin-bottom: 22px;
-      margin-top: 24px;
-      opacity: 0;
-      transform: translateY(-18px);
-      animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
-    }
-    .logo-wrap img {
-      width: 72px;
-      display: block;
-      filter: drop-shadow(0 8px 28px rgba(210,10,16,0.30));
-    }
-
     /* ─── FOTO PROFILO ───────────────────────────────────────── */
     .avatar-wrap {
       position: relative;
+      margin-top: 28px;
       margin-bottom: 12px;
       opacity: 0;
       transform: translateY(16px);
-      animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.22s forwards;
+      animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
     }
     .avatar {
       width: 106px;
@@ -400,13 +387,12 @@
       opacity: 0;
       animation: fadeUp 0.8s ease 1.0s forwards;
     }
-    footer strong {
+    .footer-logo {
       display: block;
-      font-weight: 700;
-      color: #999999;
-      letter-spacing: 0.18em;
-      font-size: 10.5px;
-      margin-bottom: 2px;
+      width: 80px;
+      margin: 0 auto 10px;
+      opacity: 0.7;
+      filter: drop-shadow(0 2px 6px rgba(210,10,16,0.20));
     }
 
     /* ─── KEYFRAMES ──────────────────────────────────────────── */
@@ -423,14 +409,6 @@
   <div class="scanline"></div>
 
   <div class="wrapper">
-
-    <!-- Logo -->
-    <div class="logo-wrap">
-      <img
-        src="https://raw.githubusercontent.com/m-italia/social/refs/heads/main/icons/logo-m-italia-big-wht.svg"
-        alt="M-Italia Logo"
-      >
-    </div>
 
     <!-- Foto profilo -->
     <div class="avatar-wrap">
@@ -584,9 +562,10 @@
 
     <!-- Footer -->
     <footer>
-      Copyright © 2026 – Tutti i diritti riservati
-      <strong>M-ITALIA SRL</strong>
-      Via Tommaso Abbate, 43 — 30020 Quarto d'Altino (VE)<br>
+      <img src="https://raw.githubusercontent.com/m-italia/vcard/main/icons/m-italia-wide-wht.svg" alt="M-Italia" class="footer-logo">
+      Copyright © 2026 – Tutti i diritti riservati<br>
+      Via Tommaso Abbate, 43<br>
+      30020 Quarto d'Altino (VE)<br>
       Partita IVA IT01333670329
     </footer>
 
