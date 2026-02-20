@@ -33,7 +33,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 32px 24px 24px;
+      padding: 0 20px 16px;
       overflow-x: hidden;
       position: relative;
       -webkit-tap-highlight-color: transparent;
@@ -82,11 +82,13 @@
       align-items: center;
       width: 100%;
       max-width: 400px;
+      padding: 0;
     }
 
-    /* ─── LOGO AZIENDALE ─────────────────────────────────────── */
+    /* ─── LOGO ───────────────────────────────────────────────── */
     .logo-wrap {
-      margin-bottom: 24px;
+      margin-bottom: 14px;
+      margin-top: 24px;
       opacity: 0;
       transform: translateY(-18px);
       animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
@@ -100,21 +102,19 @@
     /* ─── FOTO PROFILO ───────────────────────────────────────── */
     .avatar-wrap {
       position: relative;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       opacity: 0;
       transform: translateY(16px);
       animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.22s forwards;
     }
     .avatar {
-      width: 96px;
-      height: 96px;
+      width: 88px;
+      height: 88px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      border: 2px solid var(--border);
-      filter: drop-shadow(0 4px 18px rgba(0,0,0,0.5));
+      border: 2px solid rgba(255,255,255,0.15);
     }
-    /* anello rosso attorno all'avatar */
     .avatar-wrap::before {
       content: '';
       position: absolute;
@@ -124,9 +124,9 @@
       opacity: 0.7;
     }
 
-    /* ─── INFO PERSONA ───────────────────────────────────────── */
+    /* ─── NOME E RUOLO ───────────────────────────────────────── */
     .person-name {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -137,15 +137,14 @@
       transform: translateY(10px);
       animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.32s forwards;
     }
-
     .person-role {
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 300;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--red);
       text-align: center;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
       opacity: 0;
       transform: translateY(10px);
       animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.38s forwards;
@@ -153,10 +152,11 @@
 
     /* ─── DIVIDER ────────────────────────────────────────────── */
     .divider {
+      display: block;
       width: 36px;
       height: 2px;
       background: var(--red);
-      margin: 0 auto 20px;
+      margin: 0 auto 14px;
       opacity: 0;
       transform: scaleX(0);
       animation: scaleIn 0.5s ease 0.44s forwards;
@@ -168,7 +168,7 @@
       flex-direction: column;
       gap: 0;
       width: 100%;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
 
     .contacts-row-group {
@@ -184,7 +184,7 @@
       justify-content: center;
       flex: 1;
       gap: 5px;
-      padding: 14px 12px;
+      padding: 8px 12px;
       text-decoration: none;
       color: var(--white);
       background: transparent;
@@ -202,8 +202,8 @@
       flex-shrink: 0;
     }
     .contact-icon img {
-      width: 26px;
-      height: 26px;
+      width: 22px;
+      height: 22px;
       display: block;
     }
 
@@ -238,7 +238,7 @@
     .actions {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
       width: 100%;
     }
 
@@ -249,8 +249,8 @@
       justify-content: center;
       gap: 10px;
       width: 100%;
-      min-height: 52px;
-      padding: 14px 20px;
+      min-height: 44px;
+      padding: 10px 20px;
       font-family: 'Titillium Web', sans-serif;
       font-size: 10.5px;
       font-weight: 700;
@@ -331,13 +331,17 @@
       background: rgba(66, 133, 244, 0.10);
       transform: translateY(-1px);
     }
-    /* ─── SOCIAL BAR ─────────────────────────────────────────── */
+    /* padding contenuto sotto card */
+    .content-pad {
+      width: 100%;
+      padding: 0 24px;
+    }
     .social-bar {
       display: flex;
       justify-content: center;
       gap: 24px;
-      margin-top: 16px;
-      margin-bottom: 4px;
+      margin-top: 10px;
+      margin-bottom: 2px;
       opacity: 0;
       animation: fadeUp 0.8s ease 1.0s forwards;
     }
@@ -369,7 +373,7 @@
     .website-link {
       display: block;
       text-align: center;
-      margin-top: 8px;
+      margin-top: 6px;
       font-size: 10.5px;
       font-weight: 400;
       letter-spacing: 0.14em;
@@ -386,8 +390,8 @@
 
     /* ─── FOOTER ─────────────────────────────────────────────── */
     footer {
-      margin-top: 24px;
-      padding-top: 14px;
+      margin-top: 12px;
+      padding-top: 10px;
       width: 100%;
       border-top: 1px solid rgba(255,255,255,0.08);
       text-align: center;
@@ -420,7 +424,7 @@
 
   <div class="wrapper">
 
-    <!-- Logo aziendale -->
+    <!-- Logo -->
     <div class="logo-wrap">
       <img
         src="https://raw.githubusercontent.com/m-italia/social/refs/heads/main/icons/logo-m-italia-big-wht.svg"
@@ -431,32 +435,32 @@
     <!-- Foto profilo -->
     <div class="avatar-wrap">
       <img
-        src="https://placehold.co/200x200/1a1a1a/555555?text=XX"
-        alt="Nome Cognome"
+        src="https://raw.githubusercontent.com/m-italia/vcard/main/profile/edoardo-moras.png"
+        alt="Edoardo Moras"
         class="avatar"
       >
     </div>
 
     <!-- Nome e ruolo -->
-    <div class="person-name">NOME COGNOME</div>
-    <div class="person-role">RUOLO</div>
+    <div class="person-name">Edoardo Moras</div>
+    <div class="person-role">Amministratore</div>
 
     <!-- Divider -->
     <div class="divider"></div>
 
     <!-- Contatti -->
-    <div class="contacts">
+    <div class="contacts" style="padding: 0 24px; width: 100%">
 
       <!-- Cellulare + Centralino affiancati -->
       <div class="contacts-row-group">
 
-        <a href="tel:+39XXXXXXXXXX" class="contact-row">
+        <a href="tel:+393356666739" class="contact-row">
           <div class="contact-icon">
             <img src="https://raw.githubusercontent.com/m-italia/vcard/refs/heads/main/icons/mobile-wht.svg" alt="cellulare">
           </div>
           <div class="contact-info">
             <span class="contact-label">Cellulare</span>
-            <span class="contact-value">+39 XXX XXX XXXX</span>
+            <span class="contact-value">+39 335 666 6739</span>
           </div>
         </a>
 
@@ -473,24 +477,27 @@
       </div>
 
       <!-- Email -->
-      <a href="mailto:nome.cognome@m-italia.com" class="contact-row">
+      <a href="/cdn-cgi/l/email-protection#99f7f6f4fcb7faf6fef7f6f4fcd9f4b4f0edf8f5f0f8b7faf6f4" class="contact-row">
         <div class="contact-icon">
           <img src="https://raw.githubusercontent.com/m-italia/vcard/refs/heads/main/icons/mail-wht.svg" alt="email">
         </div>
         <div class="contact-info">
           <span class="contact-label">Email</span>
-          <span class="contact-value">nome.cognome@m-italia.com</span>
+          <span class="contact-value"><span class="__cf_email__" data-cfemail="3b5554565e1558545c5554565e7b5616524f5a57525a15585456">[email&#160;protected]</span></span>
         </div>
       </a>
 
     </div>
+
+    <!-- Tasti + social + footer -->
+    <div class="content-pad">
 
     <!-- Action buttons -->
     <div class="actions">
 
       <!-- WhatsApp -->
       <a
-        href="https://wa.me/39XXXXXXXXXX"
+        href="https://wa.me/393356666739"
         target="_blank"
         rel="noopener"
         class="action-btn btn-wa"
@@ -583,9 +590,11 @@
       Partita IVA IT01333670329
     </footer>
 
+    </div><!-- /content-pad -->
+
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     /* ─── VCARD DOWNLOAD ─────────────────────────────────────── */
     /*
       Personalizza i campi qui sotto con i dati reali della persona.
@@ -597,28 +606,17 @@
       const vcard = [
         'BEGIN:VCARD',
         'VERSION:3.0',
-        'FN:NOME COGNOME',
-        'N:COGNOME;NOME;;;',
+        'FN:Edoardo Moras',
+        'N:Moras;Edoardo;;;',
         'ORG:M-Italia Srl',
-        'TITLE:RUOLO',
-        'TEL;TYPE=CELL,PREF:+39XXXXXXXXXX',
+        'TITLE:Amministratore',
+        'TEL;TYPE=CELL,PREF:+393356666739',
         'TEL;TYPE=WORK:+390422178313',
-        'EMAIL;TYPE=WORK:nome.cognome@m-italia.com',
+        'EMAIL;TYPE=WORK:edoardo.moras@m-italia.com',
         'URL:https://www.m-italia.com',
         'ADR;TYPE=WORK:;;Via Tommaso Abbate 43;Quarto d\'Altino;VE;30020;Italia',
         'END:VCARD'
       ].join('\r\n');
       const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
       const url  = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href     = url;
-      link.download = 'nome-cognome-m-italia.vcf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-    }
-  </script>
-
-</body>
-</html>
+      const link = document.createEl
