@@ -601,21 +601,18 @@
       Il formato vCard 3.0 è supportato da iOS, Android e tutti i client di contatti.
     */
     /* ─── EMAIL ANTI-CLOUDFLARE ─────────────────────────────── */
-    (function() {
-      var u = 'edoardo.moras';
-      var d = 'm-italia.com';
-      var email = u + '@' + d;
+    var _em = 'edoardo.moras' + '@' + 'm-italia.com';
+
+    document.addEventListener('DOMContentLoaded', function() {
       var el = document.getElementById('emailDisplay');
       var link = document.getElementById('emailLink');
-      if (el) el.textContent = email;
-      if (link) link.setAttribute('data-email', email);
-    })();
+      if (el) el.textContent = _em;
+      if (link) link.setAttribute('data-email', _em);
+    });
 
     function openMail(e) {
       e.preventDefault();
-      var link = document.getElementById('emailLink');
-      var email = link.getAttribute('data-email');
-      window.location.href = 'mailto:' + email;
+      window.location.href = 'mailto:' + _em;
     }
 
     function downloadVCard(e) {
